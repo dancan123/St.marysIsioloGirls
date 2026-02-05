@@ -829,15 +829,20 @@ footer {
 /* Responseive */
 @media (max-width: 1024px) {
     .container {
-        padding: 0 40px;
+        padding: 0 24px;
     }
 
     .footer-top {
         grid-template-columns: 1fr 1fr;
+        gap: 40px;
     }
 
     .section-title {
-        font-size: 3rem;
+        font-size: 2.8rem;
+    }
+
+    .slide-content h1 {
+        font-size: 3.5rem;
     }
 }
 
@@ -852,18 +857,98 @@ footer {
 
     .content-layout {
         grid-template-columns: 1fr;
+        gap: 40px;
+        padding: 40px 0;
     }
 
     .hero-slider .slide-content h1 {
-        font-size: 3rem;
+        font-size: 2.4rem;
+        line-height: 1.1;
+    }
+
+    .hero-slider .slide-content p {
+        font-size: 1.1rem;
+        margin-bottom: 30px;
     }
 
     .section-title {
+        font-size: 2rem;
+    }
+
+    .section-header {
+        margin-bottom: 40px;
+    }
+
+    .btns,
+    .hero-btns {
+        flex-direction: column;
+        gap: 15px;
+        width: 100%;
+    }
+
+    .btn {
+        width: 100%;
+        padding: 14px 28px;
+    }
+
+    .features-overlap {
+        margin-top: -20px;
+    }
+
+    .feature-card {
+        padding: 30px 20px;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+    }
+
+    .stat-item h2 {
         font-size: 2.5rem;
     }
 
+    .footer-top {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .footer-col {
+        margin-bottom: 40px;
+    }
+
+    .footer-col.footer-logo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+
+    .page-header {
+        padding: 140px 0 60px;
+    }
+
+    .page-header h1 {
+        font-size: 2.5rem;
+    }
+
+    /* Admissions Form Grid */
     .contact-form-grid {
         grid-template-columns: 1fr;
+    }
+
+    /* Contact Page Columns */
+    .contact-form div[style*="grid-template-columns"] {
+        grid-template-columns: 1fr !important;
     }
 }
 
@@ -889,13 +974,15 @@ header.scrolled .mobile-menu-btn {
         position: fixed;
         top: 0;
         right: -100%;
-        width: 300px;
+        width: 85%;
+        max-width: 320px;
         height: 100vh;
         background: var(--navy-dark);
         flex-direction: column;
-        padding: 100px 40px;
+        padding: 120px 40px;
         z-index: 2000;
-        transition: 0.5s ease;
+        transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        box-shadow: -10px 0 30px rgba(0, 0, 0, 0.3);
     }
 
     .nav-links.active {
@@ -904,7 +991,15 @@ header.scrolled .mobile-menu-btn {
 
     .nav-item {
         color: var(--white) !important;
-        font-size: 1.25rem;
+        font-size: 1.1rem;
+        margin-bottom: 25px;
+        display: block;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        padding-bottom: 15px;
+    }
+
+    .nav-item::after {
+        display: none;
     }
 }
 

@@ -150,6 +150,12 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.nav-links a').forEach(link => {
         link.addEventListener('click', () => {
             if (window.innerWidth <= 991) {
+                // If this link is a dropdown toggle (has a sibling menu), don't close the main menu
+                if (link.nextElementSibling && link.nextElementSibling.classList.contains('dropdown-menu')) {
+                    return;
+                }
+
+                // Otherwise (Home, About, or a Dropdown Item), close the menu
                 closeMobileMenu();
             }
         });

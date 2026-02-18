@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>News & Events | St. Mary's Senior Girls School, Isiolo</title>
+    <meta name="description"
+        content="Stay updated with the latest news, events, and achievements from St. Mary's Senior Girls School, Isiolo.">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -14,8 +16,8 @@
     <div class="top-bar">
         <div class="container">
             <div class="contact-info">
-                <span><i class="fas fa-phone"></i> +254 700 123 456</span>
-                <span><i class="fas fa-envelope"></i> info@stmarysisiolo.ac.ke</span>
+                <span><i class="fas fa-phone"></i> 0711 684 179</span>
+                <span><i class="fas fa-envelope"></i> isiolostmarysgirls@gmail.com</span>
             </div>
             <div class="top-links">
                 <a href="#"><i class="fas fa-user-graduate"></i> Student Portal</a>
@@ -25,187 +27,169 @@
         </div>
     </div>
 
-    <header id="main-header" class="scrolled">
+    <!-- Header & Navigation -->
+    <header id="main-header" class="scrolled"> <!-- Always scrolled on subpages -->
         <div class="container">
             <nav class="nav-container">
                 <a href="index.html" class="logo">
-                    <div class="logo-icon">SM</div>
+                    <img src="Assets/St.marys_Logo.jpg" alt="St. Mary's School Logo" class="logo-img">
                     <div class="logo-text">
                         <h1>St. Mary's Isiolo</h1>
                         <p>Faith, Excellence & Service</p>
                     </div>
                 </a>
+
                 <ul class="nav-links">
                     <li><a href="index.html" class="nav-item">Home</a></li>
                     <li><a href="about.html" class="nav-item">About Us</a></li>
+                    <li class="dropdown">
+                        <a href="departments.html" class="nav-item">Departments <i class="fas fa-chevron-down"
+                                style="font-size: 0.7rem; margin-left: 5px;"></i></a>
+                        <div class="dropdown-menu">
+                            <div class="dropdown-header">Academic Pathways</div>
+                            <a href="departments.html#stem" class="dropdown-item"><i class="fas fa-atom"></i> STEM
+                                Pathway</a>
+                            <a href="departments.html#social-sciences" class="dropdown-item"><i
+                                    class="fas fa-globe"></i> Social Sciences</a>
+                            <a href="departments.html#arts-sports" class="dropdown-item"><i class="fas fa-palette"></i>
+                                Arts & Sports</a>
+                            <div class="dropdown-header">Administration & Support</div>
+                            <a href="departments.html#admin" class="dropdown-item"><i class="fas fa-user-tie"></i>
+                                Administration</a>
+                            <a href="departments.html#finance" class="dropdown-item"><i class="fas fa-wallet"></i>
+                                Finance & Accounts</a>
+                            <a href="departments.html#guidance" class="dropdown-item"><i
+                                    class="fas fa-hands-helping"></i> Guidance & Counseling</a>
+                            <a href="departments.html#ict" class="dropdown-item"><i class="fas fa-laptop-code"></i> ICT
+                                Department</a>
+                        </div>
+                    </li>
                     <li><a href="academics.html" class="nav-item">Academics</a></li>
                     <li><a href="admissions.html" class="nav-item">Admissions</a></li>
                     <li><a href="student-life.html" class="nav-item">Student Life</a></li>
                     <li><a href="news.html" class="nav-item active">News</a></li>
+                    <li><a href="bishop.html" class="nav-item">Bishop's Message</a></li>
                     <li><a href="contact.html" class="nav-item">Contact</a></li>
                 </ul>
+
                 <div class="nav-actions">
                     <button class="mobile-menu-btn">
                         <i class="fas fa-bars"></i>
                     </button>
-                    <a href="admissions.html" class="btn btn-primary d-none d-lg-flex"
-                        style="padding: 10px 20px;">Admission 2026</a>
+                    <a href="admissions.html" class="btn btn-primary d-none d-lg-flex">Admission 2026</a>
                 </div>
             </nav>
         </div>
     </header>
 
-    <div class="page-header">
+    <!-- Page Header -->
+    <div class="page-header"
+        style="background-image: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.8)), url('Assets/school-hero.jpg');">
         <div class="container">
-            <h1 class="reveal">School News & Updates</h1>
+            <h1 class="reveal">News & Campus Updates</h1>
             <div class="breadcrumbs reveal">
                 <a href="index.html">Home</a> / <span>News</span>
             </div>
         </div>
     </div>
 
-    <section id="news-feed">
+    <!-- News Section -->
+    <section class="news-page" style="padding: 80px 0;">
         <div class="container">
-            <div class="content-layout">
-                <main class="main-content">
-                    <div class="reveal">
-                        <span class="badge">Stay Updated</span>
-                        <h2 class="section-title" style="text-align: left;">Latest Stories</h2>
+            <div class="section-header reveal">
+                <span class="badge">Stay Informed</span>
+                <h2 class="section-title">Latest from Our Community</h2>
+                <p class="section-subtitle">Read about our latest achievements, upcoming events, and stories from our
+                    students and faculty.</p>
+            </div>
 
-                        <div class="news-grid" style="display: grid; gap: 40px; margin-top: 30px;">
-                            <article class="news-card reveal"
-                                style="display: grid; grid-template-columns: 350px 1fr; gap: 0; overflow: hidden; padding: 0;">
-                                <div class="news-image" style="height: 100%; border-radius: 0;">
-                                    <img src="Assets/creative-arts.png" style="height: 100%; object-fit: cover;">
-                                </div>
-                                <div class="news-content" style="padding: 30px;">
-                                    <span class="news-date"><i class="far fa-calendar-alt"></i> Jan 28, 2026</span>
-                                    <h3 style="font-size: 1.4rem; margin: 15px 0;">Inspiring Scientific Excellence and
-                                        Girls in STEM</h3>
-                                    <p style="margin-bottom: 20px; color: var(--gray-600);">Our students continue to
-                                        break barriers in science and technology, as highlighted in this year's magazine
-                                        feature on innovation and excellence...</p>
-                                    <a href="#" class="btn btn-primary"
-                                        style="padding: 8px 20px; font-size: 0.85rem;">Read More</a>
-                                </div>
-                            </article>
-
-                            <article class="news-card reveal"
-                                style="display: grid; grid-template-columns: 350px 1fr; gap: 0; overflow: hidden; padding: 0;">
-                                <div class="news-image" style="height: 100%; border-radius: 0;">
-                                    <img src="Assets/student-life-3.jpg" style="height: 100%; object-fit: cover;">
-                                </div>
-                                <div class="news-content" style="padding: 30px;">
-                                    <span class="news-date"><i class="far fa-calendar-alt"></i> Jan 20, 2026</span>
-                                    <h3 style="font-size: 1.4rem; margin: 15px 0;">Historic Sporting Achievements in
-                                        2025</h3>
-                                    <p style="margin-bottom: 20px; color: var(--gray-600);">Celebrating our athletes'
-                                        outstanding performance in national competitions. We examine the resilience and
-                                        spirit that drove our teams to victory...</p>
-                                    <a href="#" class="btn btn-primary"
-                                        style="padding: 8px 20px; font-size: 0.85rem;">Read More</a>
-                                </div>
-                            </article>
-
-                            <article class="news-card reveal"
-                                style="display: grid; grid-template-columns: 350px 1fr; gap: 0; overflow: hidden; padding: 0;">
-                                <div class="news-image" style="height: 100%; border-radius: 0;">
-                                    <img src="Assets/school-hero.jpg" style="height: 100%; object-fit: cover;">
-                                </div>
-                                <div class="news-content" style="padding: 30px;">
-                                    <span class="news-date"><i class="far fa-calendar-alt"></i> Jan 15, 2026</span>
-                                    <h3 style="font-size: 1.4rem; margin: 15px 0;">Extravaganza: Celebrating Culture,
-                                        Talent, and Confidence</h3>
-                                    <p style="margin-bottom: 20px; color: var(--gray-600);">A vibrant display of our
-                                        diverse cultural heritage and artistic talents. The annual Extravaganza brought
-                                        the whole community together in a celebration of unity...</p>
-                                    <a href="#" class="btn btn-primary"
-                                        style="padding: 8px 20px; font-size: 0.85rem;">Read More</a>
-                                </div>
-                            </article>
-                        </div>
-
-                        <div style="display: flex; justify-content: center; margin-top: 60px;">
-                            <div style="display: flex; gap: 10px;">
-                                <a href="#" class="btn btn-primary" style="padding: 10px 15px;">1</a>
-                                <a href="#" class="btn btn-secondary"
-                                    style="padding: 10px 15px; border-color: var(--gray-200); color: var(--navy);">2</a>
-                                <a href="#" class="btn btn-secondary"
-                                    style="padding: 10px 15px; border-color: var(--gray-200); color: var(--navy);">Next
-                                    <i class="fas fa-chevron-right" style="font-size: 0.8rem;"></i></a>
-                            </div>
-                        </div>
+            <div class="news-grid">
+                <article class="news-card reveal">
+                    <div class="news-image">
+                        <span class="news-category">Ecclesiastical</span>
+                        <img src="Assets/bishop-peter-ordination.jpg"
+                            alt="Episcopal Ordination of Monsignor Peter Makau">
                     </div>
-                </main>
-
-                <aside class="sidebar">
-                    <div class="sidebar-box reveal">
-                        <h3>Upcoming Events</h3>
-                        <div style="display: flex; flex-direction: column; gap: 20px;">
-                            <div style="display: flex; gap: 15px; align-items: flex-start;">
-                                <div
-                                    style="background: var(--primary); color: white; padding: 8px; border-radius: var(--radius-sm); min-width: 60px; text-align: center;">
-                                    <span
-                                        style="display: block; font-size: 1.2rem; font-weight: 800; line-height: 1;">15</span>
-                                    <span style="font-size: 0.7rem; text-transform: uppercase;">Feb</span>
-                                </div>
-                                <div>
-                                    <h4 style="font-size: 0.95rem; line-height: 1.3;">Parents' Day & Prize Giving</h4>
-                                    <p style="font-size: 0.8rem; color: var(--gray-500); margin-top: 5px;"><i
-                                            class="far fa-clock"></i> 9:00 AM</p>
-                                </div>
-                            </div>
-                            <div style="display: flex; gap: 15px; align-items: flex-start;">
-                                <div
-                                    style="background: var(--navy-dark); color: white; padding: 8px; border-radius: var(--radius-sm); min-width: 60px; text-align: center;">
-                                    <span
-                                        style="display: block; font-size: 1.2rem; font-weight: 800; line-height: 1;">22</span>
-                                    <span style="font-size: 0.7rem; text-transform: uppercase;">Feb</span>
-                                </div>
-                                <div>
-                                    <h4 style="font-size: 0.95rem; line-height: 1.3;">Annual Science Fair</h4>
-                                    <p style="font-size: 0.8rem; color: var(--gray-500); margin-top: 5px;"><i
-                                            class="far fa-clock"></i> 10:00 AM</p>
-                                </div>
-                            </div>
-                            <div style="display: flex; gap: 15px; align-items: flex-start;">
-                                <div
-                                    style="background: var(--navy-dark); color: white; padding: 8px; border-radius: var(--radius-sm); min-width: 60px; text-align: center;">
-                                    <span
-                                        style="display: block; font-size: 1.2rem; font-weight: 800; line-height: 1;">05</span>
-                                    <span style="font-size: 0.7rem; text-transform: uppercase;">Mar</span>
-                                </div>
-                                <div>
-                                    <h4 style="font-size: 0.95rem; line-height: 1.3;">Inter-School Careers Day</h4>
-                                    <p style="font-size: 0.8rem; color: var(--gray-500); margin-top: 5px;"><i
-                                            class="far fa-clock"></i> 8:30 AM</p>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="news-content">
+                        <div class="news-date"><i class="far fa-calendar"></i> July 27, 2024</div>
+                        <h3>The Episcopal Ordination of Monsignor Peter Makau IMC</h3>
+                        <p>A historic day for the Catholic Diocese of Isiolo as we celebrated the Episcopal Ordination
+                            of our Coadjutor Bishop Elect. The ceremony was held at St. Eusebius Cathedral Isiolo,
+                            marking a new chapter of leadership and pastoral care for our school and the wider
+                            community.</p>
+                        <a href="bishop.html" class="btn-text">View Bishop's Profile <i
+                                class="fas fa-arrow-right"></i></a>
                     </div>
-
-                    <div class="sidebar-box reveal" style="background: var(--primary-dark); color: white;">
-                        <h3 style="color: var(--secondary); border-color: var(--secondary);">School Magazine</h3>
-                        <p style="opacity: 0.9; margin-bottom: 15px;">Read our latest edition featuring student stories
-                            and achievements.</p>
-                        <a href="Assets/st-marys-magazine-2025.pdf" target="_blank" class="btn btn-secondary"
-                            style="width: 100%;"><i class="fas fa-download"></i> Download 2025 PDF</a>
+                </article>
+                <article class="news-card reveal">
+                    <div class="news-image">
+                        <span class="news-category">Science & STEM</span>
+                        <img src="Assets/creative-arts.png" alt="STEM Excellence">
                     </div>
-
-                    <div class="sidebar-box reveal" style="background: var(--gray-50);">
-                        <h3>Categories</h3>
-                        <ul class="footer-links">
-                            <li><a href="#" style="color: var(--navy);"><i class="fas fa-chevron-right"
-                                        style="font-size: 0.7rem;"></i> Academic Excellence</a></li>
-                            <li><a href="#" style="color: var(--navy);"><i class="fas fa-chevron-right"
-                                        style="font-size: 0.7rem;"></i> Sports News</a></li>
-                            <li><a href="#" style="color: var(--navy);"><i class="fas fa-chevron-right"
-                                        style="font-size: 0.7rem;"></i> School Events</a></li>
-                            <li><a href="#" style="color: var(--navy);"><i class="fas fa-chevron-right"
-                                        style="font-size: 0.7rem;"></i> Students Council</a></li>
-                        </ul>
+                    <div class="news-content">
+                        <div class="news-date"><i class="far fa-calendar"></i> Jan 28, 2026</div>
+                        <h3>Inspiring Scientific Excellence and Girls in STEM</h3>
+                        <p>Our students continue to break barriers in science and technology, as highlighted in this
+                            year's magazine feature on innovation and excellence. The STEM club recently presented
+                            several projects at the regional science fair.</p>
+                        <a href="#" class="btn-text">Read More <i class="fas fa-arrow-right"></i></a>
                     </div>
-                </aside>
+                </article>
+
+                <article class="news-card reveal">
+                    <div class="news-image">
+                        <span class="news-category">Sports</span>
+                        <img src="Assets/student-life-3.jpg" alt="Sports Achievements">
+                    </div>
+                    <div class="news-content">
+                        <div class="news-date"><i class="far fa-calendar"></i> Jan 20, 2026</div>
+                        <h3>Historic Sporting Achievements in 2025</h3>
+                        <p>Celebrating our athletes' outstanding performance in national competitions. Our girls have
+                            shown resilience and team spirit on and off the field, bringing home several trophies in
+                            basketball and athletics.</p>
+                        <a href="#" class="btn-text">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <article class="news-card reveal">
+                    <div class="news-image">
+                        <span class="news-category">Culture & Arts</span>
+                        <img src="Assets/school-hero.jpg" alt="Cultural Extravaganza">
+                    </div>
+                    <div class="news-content">
+                        <div class="news-date"><i class="far fa-calendar"></i> Jan 15, 2026</div>
+                        <h3>Extravaganza: Celebrating Culture, Talent, and Confidence</h3>
+                        <p>A vibrant display of our diverse cultural heritage and artistic talents. The annual
+                            Extravaganza brought the whole community together for a day of music, dance, and cultural
+                            exchange.</p>
+                        <a href="#" class="btn-text">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <article class="news-card reveal">
+                    <div class="news-image">
+                        <span class="news-category">Academics</span>
+                        <img src="Assets/student-life-2.jpg" alt="Academic Results">
+                    </div>
+                    <div class="news-content">
+                        <div class="news-date"><i class="far fa-calendar"></i> Jan 05, 2026</div>
+                        <h3>Outstanding 2025 National Exam Results</h3>
+                        <p>We are proud to announce that St. Mary's has once again secured a top position in national
+                            rankings. Congratulations to our Form 4 candidates for their exceptional performance.</p>
+                        <a href="#" class="btn-text">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Pagination (Placeholder) -->
+            <div class="pagination" style="display: flex; justify-content: center; gap: 10px; margin-top: 60px;">
+                <a href="#" class="btn-page active"
+                    style="width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; background: var(--primary); color: white;">1</a>
+                <a href="#" class="btn-page"
+                    style="width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; border: 1px solid var(--gray-200);">2</a>
+                <a href="#" class="btn-page"
+                    style="width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; border: 1px solid var(--gray-200);"><i
+                        class="fas fa-chevron-right"></i></a>
             </div>
         </div>
     </section>
@@ -216,7 +200,7 @@
             <div class="footer-top">
                 <div class="footer-col footer-logo">
                     <a href="index.html" class="logo" style="margin-bottom: 30px;">
-                        <div class="logo-icon">SM</div>
+                        <img src="Assets/St.marys_Logo.jpg" alt="St. Mary's School Logo" class="logo-img">
                         <div class="logo-text">
                             <h1 style="color: white;">St. Mary's Isiolo</h1>
                             <p style="color: rgba(255,255,255,0.6);">Faith, Excellence & Service</p>
@@ -249,10 +233,11 @@
                 <div class="footer-col">
                     <h4>Contact</h4>
                     <ul class="footer-links">
-                        <li><a><i class="fas fa-map-marker-alt"></i> P.O. Box 123-60300, Isiolo, Kenya</a></li>
-                        <li><a href="tel:+254700123456"><i class="fas fa-phone"></i> +254 700 123 456</a></li>
-                        <li><a href="mailto:info@stmarysisiolo.ac.ke"><i class="fas fa-envelope"></i>
-                                info@stmarysisiolo.ac.ke</a></li>
+                        <li><a><i class="fas fa-map-marker-alt"></i> P.O. Box 119 - 60300, Isiolo Town, Kenya. Located
+                                along the Isiolo-Marsabit Road.</a></li>
+                        <li><a href="tel:+254711684179"><i class="fas fa-phone"></i> 0711 684 179</a></li>
+                        <li><a href="mailto:isiolostmarysgirls@gmail.com"><i class="fas fa-envelope"></i>
+                                isiolostmarysgirls@gmail.com</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">

@@ -1,0 +1,936 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bishop's Message | Catholic Diocese of Isiolo | St. Mary's Girls School</title>
+    <meta name="description"
+        content="A pastoral message from Rt. Rev. Peter Munguti Makau, IMC — Bishop of the Catholic Diocese of Isiolo and Manager of St. Mary's Girls Secondary School.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=EB+Garamond:ital,wght@0,400;0,600;1,400;1,600&display=swap"
+        rel="stylesheet">
+    <style>
+        /* ── Bishop Page Specific Styles ── */
+        :root {
+            --gold: #c9a84c;
+            --gold-light: #e8c97a;
+            --gold-dark: #9a7a2e;
+            --deep-navy: #0a1628;
+            --cream: #fdf8f0;
+            --parchment: #f5edd8;
+        }
+
+        /* Hero Banner */
+        .bishop-hero {
+            background: linear-gradient(160deg, #0a1628 0%, #1a2a4a 40%, #2c1810 100%);
+            padding: 0;
+            position: relative;
+            overflow: hidden;
+            min-height: 420px;
+            display: flex;
+            align-items: center;
+        }
+
+        .bishop-hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(ellipse at 20% 50%, rgba(201, 168, 76, 0.12) 0%, transparent 60%),
+                radial-gradient(ellipse at 80% 20%, rgba(201, 168, 76, 0.08) 0%, transparent 50%);
+        }
+
+        /* Decorative cross watermark */
+        .bishop-hero::after {
+            content: '✝';
+            position: absolute;
+            right: 5%;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 18rem;
+            color: rgba(201, 168, 76, 0.05);
+            font-family: serif;
+            pointer-events: none;
+        }
+
+        .bishop-hero-inner {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            align-items: center;
+            gap: 60px;
+            padding: 60px 0;
+            flex-wrap: wrap;
+        }
+
+        .bishop-photo-wrap {
+            flex: 0 0 auto;
+            position: relative;
+        }
+
+        .bishop-photo-wrap::before {
+            content: '';
+            position: absolute;
+            inset: -8px;
+            border-radius: 16px;
+            background: linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 50%, var(--gold) 100%);
+            z-index: 0;
+        }
+
+        .bishop-photo-wrap::after {
+            content: '';
+            position: absolute;
+            inset: -16px;
+            border-radius: 20px;
+            border: 1px solid rgba(201, 168, 76, 0.3);
+            z-index: 0;
+        }
+
+        .bishop-photo-wrap img {
+            position: relative;
+            z-index: 1;
+            width: 280px;
+            height: 360px;
+            object-fit: cover;
+            object-position: top center;
+            border-radius: 12px;
+            display: block;
+        }
+
+        .bishop-hero-text {
+            flex: 1;
+            min-width: 280px;
+        }
+
+        .diocese-label {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: rgba(201, 168, 76, 0.15);
+            border: 1px solid rgba(201, 168, 76, 0.4);
+            color: var(--gold-light);
+            padding: 8px 18px;
+            border-radius: 30px;
+            font-size: 0.8rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .bishop-hero-text h1 {
+            font-family: 'Cinzel', serif;
+            font-size: clamp(1.8rem, 4vw, 3rem);
+            color: white;
+            line-height: 1.2;
+            margin-bottom: 10px;
+        }
+
+        .bishop-hero-text h1 span {
+            color: var(--gold);
+        }
+
+        .bishop-title-line {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .bishop-title-line::before,
+        .bishop-title-line::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: linear-gradient(to right, transparent, var(--gold), transparent);
+        }
+
+        .bishop-title-line span {
+            color: var(--gold);
+            font-size: 1.2rem;
+        }
+
+        .bishop-role-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: var(--gold);
+            color: var(--deep-navy);
+            padding: 10px 22px;
+            border-radius: 6px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            letter-spacing: 0.5px;
+        }
+
+        .bishop-subtitle {
+            color: rgba(255, 255, 255, 0.65);
+            font-size: 1rem;
+            margin-top: 15px;
+            font-style: italic;
+            font-family: 'EB Garamond', serif;
+            font-size: 1.1rem;
+        }
+
+        /* Message Section */
+        .bishop-message-section {
+            background: var(--cream);
+            padding: 80px 0;
+        }
+
+        .message-layout {
+            display: grid;
+            grid-template-columns: 1fr 340px;
+            gap: 50px;
+            align-items: start;
+        }
+
+        /* Parchment letter styling */
+        .message-letter {
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.08), 0 1px 4px rgba(0, 0, 0, 0.04);
+            overflow: hidden;
+            position: relative;
+        }
+
+        .letter-header {
+            background: linear-gradient(135deg, var(--deep-navy) 0%, #1a2a4a 100%);
+            padding: 35px 50px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .letter-header::after {
+            content: '✝';
+            position: absolute;
+            right: 30px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 5rem;
+            color: rgba(201, 168, 76, 0.15);
+            font-family: serif;
+        }
+
+        .letter-header-inner {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .letter-crest {
+            width: 60px;
+            height: 60px;
+            background: var(--gold);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.6rem;
+            color: var(--deep-navy);
+            flex-shrink: 0;
+        }
+
+        .letter-header h2 {
+            font-family: 'Cinzel', serif;
+            color: white;
+            font-size: 1.1rem;
+            margin-bottom: 4px;
+            letter-spacing: 1px;
+        }
+
+        .letter-header p {
+            color: var(--gold-light);
+            font-size: 0.85rem;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            margin: 0;
+        }
+
+        .letter-body {
+            padding: 50px;
+        }
+
+        .letter-greeting {
+            font-family: 'Cinzel', serif;
+            font-size: 1.1rem;
+            color: var(--deep-navy);
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid var(--parchment);
+        }
+
+        .letter-body p {
+            font-family: 'EB Garamond', serif;
+            font-size: 1.15rem;
+            line-height: 1.9;
+            color: #2d2d2d;
+            margin-bottom: 22px;
+        }
+
+        .letter-body p:last-of-type {
+            margin-bottom: 0;
+        }
+
+        /* Highlighted motto */
+        .motto-highlight {
+            background: linear-gradient(135deg, var(--deep-navy) 0%, #1a2a4a 100%);
+            border-radius: 12px;
+            padding: 30px 35px;
+            margin: 30px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .motto-highlight::before {
+            content: '"';
+            position: absolute;
+            top: -20px;
+            left: 20px;
+            font-size: 8rem;
+            color: rgba(201, 168, 76, 0.15);
+            font-family: 'EB Garamond', serif;
+            line-height: 1;
+        }
+
+        .motto-highlight p {
+            color: white !important;
+            font-family: 'EB Garamond', serif !important;
+            font-size: 1.3rem !important;
+            font-style: italic;
+            margin: 0 !important;
+            position: relative;
+            z-index: 1;
+        }
+
+        .motto-highlight p strong {
+            color: var(--gold-light);
+        }
+
+        /* Scripture quote */
+        .scripture-quote {
+            background: var(--parchment);
+            border-left: 5px solid var(--gold);
+            border-radius: 0 10px 10px 0;
+            padding: 20px 25px;
+            margin: 30px 0;
+            font-family: 'EB Garamond', serif;
+            font-style: italic;
+            font-size: 1.1rem;
+            color: var(--deep-navy);
+        }
+
+        /* Signature block */
+        .letter-signature {
+            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 1px solid var(--parchment);
+        }
+
+        .signature-line {
+            font-family: 'Cinzel', serif;
+            font-size: 0.85rem;
+            color: #888;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+        }
+
+        .signature-name {
+            font-family: 'Cinzel', serif;
+            font-size: 1.3rem;
+            color: var(--deep-navy);
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+
+        .signature-title {
+            color: var(--gold-dark);
+            font-weight: 600;
+            font-size: 0.95rem;
+            letter-spacing: 0.5px;
+        }
+
+        .signature-seal {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%);
+            border-radius: 50%;
+            color: white;
+            font-size: 1.8rem;
+            margin-top: 20px;
+            box-shadow: 0 4px 15px rgba(201, 168, 76, 0.4);
+        }
+
+        /* Sidebar */
+        .bishop-sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        .bishop-card {
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.07);
+        }
+
+        .bishop-card-header {
+            background: linear-gradient(135deg, var(--deep-navy) 0%, #1a2a4a 100%);
+            padding: 20px 25px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .bishop-card-header i {
+            color: var(--gold);
+            font-size: 1.2rem;
+        }
+
+        .bishop-card-header h3 {
+            color: white;
+            font-size: 1rem;
+            font-family: 'Cinzel', serif;
+            letter-spacing: 0.5px;
+            margin: 0;
+        }
+
+        .bishop-card-body {
+            padding: 25px;
+        }
+
+        /* Bishop portrait card */
+        .portrait-card {
+            background: linear-gradient(160deg, var(--deep-navy) 0%, #1a2a4a 100%);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+
+        .portrait-card img {
+            width: 100%;
+            height: 320px;
+            object-fit: cover;
+            object-position: top center;
+            display: block;
+        }
+
+        .portrait-card-info {
+            padding: 25px;
+        }
+
+        .portrait-card-info h3 {
+            font-family: 'Cinzel', serif;
+            color: white;
+            font-size: 1.1rem;
+            margin-bottom: 6px;
+        }
+
+        .portrait-card-info p {
+            color: var(--gold-light);
+            font-size: 0.85rem;
+            letter-spacing: 0.5px;
+            margin: 0;
+        }
+
+        .portrait-divider {
+            width: 60px;
+            height: 2px;
+            background: var(--gold);
+            margin: 12px auto;
+        }
+
+        /* Key values */
+        .value-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            padding: 15px 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .value-item:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        .value-icon {
+            width: 38px;
+            height: 38px;
+            background: linear-gradient(135deg, var(--deep-navy) 0%, #1a2a4a 100%);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--gold);
+            font-size: 0.9rem;
+            flex-shrink: 0;
+        }
+
+        .value-text h4 {
+            font-size: 0.9rem;
+            color: var(--deep-navy);
+            margin-bottom: 3px;
+            font-family: 'Cinzel', serif;
+        }
+
+        .value-text p {
+            font-size: 0.8rem;
+            color: #777;
+            margin: 0;
+            line-height: 1.5;
+        }
+
+        /* Diocese info card */
+        .diocese-info-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px 0;
+            border-bottom: 1px solid #f5f5f5;
+            font-size: 0.9rem;
+            color: #444;
+        }
+
+        .diocese-info-item:last-child {
+            border-bottom: none;
+        }
+
+        .diocese-info-item i {
+            color: var(--gold-dark);
+            width: 18px;
+            text-align: center;
+        }
+
+        /* Responsive */
+        @media (max-width: 900px) {
+            .message-layout {
+                grid-template-columns: 1fr;
+            }
+
+            .bishop-hero-inner {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .bishop-title-line::before,
+            .bishop-title-line::after {
+                display: none;
+            }
+
+            .letter-body {
+                padding: 30px 25px;
+            }
+
+            .letter-header {
+                padding: 25px 30px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="contact-info">
+                <span><i class="fas fa-phone"></i> 0711 684 179</span>
+                <span><i class="fas fa-envelope"></i> isiolostmarysgirls@gmail.com</span>
+            </div>
+            <div class="top-links">
+                <a href="#"><i class="fas fa-user-graduate"></i> Student Portal</a>
+                <a href="#"><i class="fas fa-user-tie"></i> Staff Portal</a>
+                <a href="admissions.html" style="color: var(--secondary); font-weight: 800;">APPLY 2026</a>
+            </div>
+        </div>
+    </div>
+
+    <header id="main-header" class="scrolled">
+        <div class="container">
+            <nav class="nav-container">
+                <a href="index.html" class="logo">
+                    <img src="Assets/St.marys_Logo.jpg" alt="St. Mary's School Logo" class="logo-img">
+                    <div class="logo-text">
+                        <h1>St. Mary's Isiolo</h1>
+                        <p>Faith, Excellence &amp; Service</p>
+                    </div>
+                </a>
+                <ul class="nav-links">
+                    <li><a href="index.html" class="nav-item">Home</a></li>
+                    <li><a href="about.html" class="nav-item">About Us</a></li>
+                    <li class="dropdown">
+                        <a href="departments.html" class="nav-item">Departments <i class="fas fa-chevron-down"
+                                style="font-size: 0.7rem; margin-left: 5px;"></i></a>
+                        <div class="dropdown-menu">
+                            <div class="dropdown-header">Academic Pathways</div>
+                            <a href="departments.html#stem" class="dropdown-item"><i class="fas fa-atom"></i> STEM
+                                Pathway</a>
+                            <a href="departments.html#social-sciences" class="dropdown-item"><i
+                                    class="fas fa-globe"></i> Social Sciences</a>
+                            <a href="departments.html#arts-sports" class="dropdown-item"><i class="fas fa-palette"></i>
+                                Arts & Sports</a>
+                            <div class="dropdown-header">Administration & Support</div>
+                            <a href="departments.html#admin" class="dropdown-item"><i class="fas fa-user-tie"></i>
+                                Administration</a>
+                            <a href="departments.html#finance" class="dropdown-item"><i class="fas fa-wallet"></i>
+                                Finance & Accounts</a>
+                            <a href="departments.html#guidance" class="dropdown-item"><i
+                                    class="fas fa-hands-helping"></i> Guidance & Counseling</a>
+                            <a href="departments.html#ict" class="dropdown-item"><i class="fas fa-laptop-code"></i> ICT
+                                Department</a>
+                        </div>
+                    </li>
+                    <li><a href="academics.html" class="nav-item">Academics</a></li>
+                    <li><a href="admissions.html" class="nav-item">Admissions</a></li>
+                    <li><a href="student-life.html" class="nav-item">Student Life</a></li>
+                    <li><a href="news.html" class="nav-item">News</a></li>
+                    <li><a href="contact.html" class="nav-item">Contact</a></li>
+                </ul>
+                <div class="nav-actions">
+                    <button class="mobile-menu-btn">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <a href="admissions.html" class="btn btn-primary d-none d-lg-flex">Admission 2026</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ═══════════════════════════════════════════ -->
+    <!-- BISHOP HERO BANNER                          -->
+    <!-- ═══════════════════════════════════════════ -->
+    <section class="bishop-hero">
+        <div class="container">
+            <div class="bishop-hero-inner">
+
+                <!-- Bishop Photo -->
+                <div class="bishop-photo-wrap reveal">
+                    <img src="Assets/bishop-peter-makau.jpg"
+                        alt="Rt. Rev. Peter Munguti Makau, IMC — Bishop of Catholic Diocese of Isiolo">
+                </div>
+
+                <!-- Hero Text -->
+                <div class="bishop-hero-text reveal">
+                    <div class="diocese-label">
+                        <i class="fas fa-cross"></i>
+                        Catholic Diocese of Isiolo
+                    </div>
+                    <h1>Rt. Rev. <span>Peter Munguti</span> Makau, IMC</h1>
+
+                    <div class="bishop-title-line">
+                        <span>✝</span>
+                    </div>
+
+                    <div class="bishop-role-badge">
+                        <i class="fas fa-church"></i>
+                        Bishop &amp; School Manager — St. Mary's Girls School
+                    </div>
+
+                    <p class="bishop-subtitle">
+                        "Console, Console My People" — Isaiah 40:1
+                    </p>
+
+                    <div style="margin-top: 30px; display: flex; gap: 15px; flex-wrap: wrap;">
+                        <a href="#message" class="btn btn-secondary">
+                            <i class="fas fa-scroll"></i> Read Full Message
+                        </a>
+                        <a href="about.html" class="btn btn-outline"
+                            style="border-color: rgba(201,168,76,0.5); color: rgba(255,255,255,0.8);">
+                            <i class="fas fa-school"></i> About the School
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════ -->
+    <!-- BISHOP'S MESSAGE                            -->
+    <!-- ═══════════════════════════════════════════ -->
+    <section id="message" class="bishop-message-section">
+        <div class="container">
+            <div class="message-layout">
+
+                <!-- ── LETTER ── -->
+                <div class="message-letter reveal">
+
+                    <!-- Letter Header -->
+                    <div class="letter-header">
+                        <div class="letter-header-inner">
+                            <div class="letter-crest">
+                                <i class="fas fa-cross"></i>
+                            </div>
+                            <div>
+                                <h2>Catholic Diocese of Isiolo</h2>
+                                <p>Office of the Bishop &nbsp;|&nbsp; Manager's Message</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Letter Body -->
+                    <div class="letter-body">
+
+                        <p class="letter-greeting">
+                            Pastoral Greetings from the Bishop's Office
+                        </p>
+
+                        <p>I warmly extend my pastoral greetings to the administration, staff, students, parents, and
+                            all friends of this noble institution. As the Manager, I give thanks to God for the gift of
+                            education and for the dedicated service of the school administration who faithfully leads
+                            this school in the spirit of the Gospel.</p>
+
+                        <!-- Motto Highlight -->
+                        <div class="motto-highlight">
+                            <p>The motto of our school, <strong>"Education is Empowerment,"</strong> beautifully
+                                captures the Church's belief that education transforms lives. True education does not
+                                only impart academic knowledge but empowers young people to discover their God-given
+                                potential and to use their talents responsibly in service to humanity.</p>
+                        </div>
+
+                        <p>Guided by the vision of being a center of excellence in holistic education and mission, this
+                            school continues to form students intellectually, morally, spiritually, socially, and
+                            physically. Such holistic formation prepares learners not only for academic success but also
+                            for meaningful, fulfilling lives rooted in faith, discipline, compassion, and service.</p>
+
+                        <p>The school mission — to create an enabling environment where learners acquire knowledge
+                            alongside spiritual, mental, physical, and social skills — reflects the heart of Catholic
+                            education. In a world often marked by uncertainty and moral challenges, this school stands
+                            as a place of hope, consolation, and values, where young minds and hearts are nurtured to
+                            become responsible leaders and witnesses of truth.</p>
+
+                        <p>I commend the teaching and non-teaching staff for their selfless commitment, and I encourage
+                            students to take full advantage of the opportunities provided here. Let your education
+                            empower you to become agents of peace, justice, and positive change in the society.</p>
+
+                        <p>As your Bishop, I assure you of my prayers and blessings. May God continue to console His
+                            people through this institution, and may the Blessed Virgin Mary guide and protect this
+                            school community always.</p>
+
+                        <p
+                            style="font-family: 'Cinzel', serif; font-size: 1.05rem; color: var(--deep-navy); font-weight: 600;">
+                            God bless you all.
+                        </p>
+
+                        <!-- Scripture Quote -->
+                        <div class="scripture-quote">
+                            <i class="fas fa-bible" style="color: var(--gold-dark); margin-right: 8px;"></i>
+                            <em>"Console, Console My People"</em> — Isaiah 40:1
+                        </div>
+
+                        <!-- Signature Block -->
+                        <div class="letter-signature">
+                            <div class="signature-line">Signed &amp; Sealed</div>
+
+                            <div style="display: flex; align-items: center; gap: 30px; flex-wrap: wrap;">
+                                <div>
+                                    <!-- Stylised signature placeholder -->
+                                    <div
+                                        style="font-family: 'EB Garamond', serif; font-size: 2rem; font-style: italic; color: var(--deep-navy); border-bottom: 2px solid var(--gold); padding-bottom: 5px; margin-bottom: 12px; min-width: 200px;">
+                                        Peter Munguti Makau
+                                    </div>
+                                    <div class="signature-name">Rt. Rev. Peter Munguti Makau, IMC</div>
+                                    <div class="signature-title">Bishop — Catholic Diocese of Isiolo</div>
+                                    <div class="signature-title"
+                                        style="color: #888; font-weight: 400; margin-top: 4px;">
+                                        Manager, St. Mary's Girls Secondary School
+                                    </div>
+                                </div>
+
+                                <div class="signature-seal">
+                                    <i class="fas fa-cross"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div><!-- /letter-body -->
+                </div><!-- /message-letter -->
+
+                <!-- ── SIDEBAR ── -->
+                <aside class="bishop-sidebar">
+
+                    <!-- Portrait Card -->
+                    <div class="portrait-card reveal">
+                        <img src="Assets/bishop-peter-ceremony.jpg" alt="Bishop Peter Munguti Makau in full vestments">
+                        <div class="portrait-card-info">
+                            <h3>Rt. Rev. Peter Munguti Makau</h3>
+                            <div class="portrait-divider"></div>
+                            <p>IMC &nbsp;|&nbsp; Bishop, Catholic Diocese of Isiolo</p>
+                            <p style="margin-top: 8px; color: rgba(255,255,255,0.5); font-size: 0.8rem;">School Manager
+                                &amp; Pastoral Overseer</p>
+                        </div>
+                    </div>
+
+                    <!-- Diocese Info -->
+                    <div class="bishop-card reveal">
+                        <div class="bishop-card-header">
+                            <i class="fas fa-church"></i>
+                            <h3>Diocese Information</h3>
+                        </div>
+                        <div class="bishop-card-body">
+                            <div class="diocese-info-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Catholic Diocese of Isiolo, Kenya</span>
+                            </div>
+                            <div class="diocese-info-item">
+                                <i class="fas fa-cross"></i>
+                                <span>Consolata Missionary Fathers (IMC)</span>
+                            </div>
+                            <div class="diocese-info-item">
+                                <i class="fas fa-school"></i>
+                                <span>Manager — St. Mary's Girls School</span>
+                            </div>
+                            <div class="diocese-info-item">
+                                <i class="fas fa-bible"></i>
+                                <span>"Console My People" — Isaiah 40:1</span>
+                            </div>
+                            <div class="diocese-info-item">
+                                <i class="fas fa-envelope"></i>
+                                <span>isiolostmarysgirls@gmail.com</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- School Values -->
+                    <div class="bishop-card reveal">
+                        <div class="bishop-card-header">
+                            <i class="fas fa-star"></i>
+                            <h3>Pillars of Formation</h3>
+                        </div>
+                        <div class="bishop-card-body">
+                            <div class="value-item">
+                                <div class="value-icon"><i class="fas fa-pray"></i></div>
+                                <div class="value-text">
+                                    <h4>Spiritual</h4>
+                                    <p>Rooted in faith, daily Mass &amp; prayer</p>
+                                </div>
+                            </div>
+                            <div class="value-item">
+                                <div class="value-icon"><i class="fas fa-brain"></i></div>
+                                <div class="value-text">
+                                    <h4>Intellectual</h4>
+                                    <p>Academic excellence &amp; critical thinking</p>
+                                </div>
+                            </div>
+                            <div class="value-item">
+                                <div class="value-icon"><i class="fas fa-heart"></i></div>
+                                <div class="value-text">
+                                    <h4>Moral &amp; Social</h4>
+                                    <p>Integrity, compassion &amp; service</p>
+                                </div>
+                            </div>
+                            <div class="value-item">
+                                <div class="value-icon"><i class="fas fa-running"></i></div>
+                                <div class="value-text">
+                                    <h4>Physical</h4>
+                                    <p>Sports, wellness &amp; holistic health</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CTA -->
+                    <div class="bishop-card reveal"
+                        style="background: linear-gradient(135deg, var(--deep-navy) 0%, #1a2a4a 100%); overflow: hidden;">
+                        <div class="bishop-card-body" style="padding: 30px; text-align: center;">
+                            <i class="fas fa-cross"
+                                style="font-size: 2rem; color: var(--gold); margin-bottom: 15px; display: block;"></i>
+                            <h3
+                                style="color: white; font-family: 'Cinzel', serif; font-size: 1rem; margin-bottom: 10px;">
+                                Join Our Community</h3>
+                            <p
+                                style="color: rgba(255,255,255,0.65); font-size: 0.85rem; margin-bottom: 20px; line-height: 1.6;">
+                                Enroll your daughter in a school where faith and excellence meet.</p>
+                            <a href="admissions.html" class="btn btn-secondary"
+                                style="width: 100%; justify-content: center;">Apply for 2026</a>
+                        </div>
+                    </div>
+
+                </aside>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════ -->
+    <!-- FOOTER                                      -->
+    <!-- ═══════════════════════════════════════════ -->
+    <footer>
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-col footer-logo">
+                    <a href="index.html" class="logo" style="margin-bottom: 30px;">
+                        <img src="Assets/St.marys_Logo.jpg" alt="St. Mary's School Logo" class="logo-img">
+                        <div class="logo-text">
+                            <h1 style="color: white;">St. Mary's Isiolo</h1>
+                            <p style="color: rgba(255,255,255,0.6);">Faith, Excellence &amp; Service</p>
+                        </div>
+                    </a>
+                    <p style="opacity: 0.7; margin-bottom: 30px;">Empowering young women since 1980 through
+                        character-building education and spiritual guidance in the heart of Isiolo County.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Explore</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html"><i class="fas fa-chevron-right" style="font-size: 0.7rem;"></i> About
+                                School</a></li>
+                        <li><a href="academics.html"><i class="fas fa-chevron-right" style="font-size: 0.7rem;"></i>
+                                Academic Programs</a></li>
+                        <li><a href="admissions.html"><i class="fas fa-chevron-right" style="font-size: 0.7rem;"></i>
+                                Admissions</a></li>
+                        <li><a href="student-life.html"><i class="fas fa-chevron-right" style="font-size: 0.7rem;"></i>
+                                Student Life</a></li>
+                        <li><a href="bishop.html"><i class="fas fa-chevron-right" style="font-size: 0.7rem;"></i>
+                                Bishop's Message</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul class="footer-links">
+                        <li><a><i class="fas fa-map-marker-alt"></i> P.O. Box 119 - 60300, Isiolo Town, Kenya. Located
+                                along the Isiolo-Marsabit Road.</a></li>
+                        <li><a href="tel:+254711684179"><i class="fas fa-phone"></i> 0711 684 179</a></li>
+                        <li><a href="mailto:isiolostmarysgirls@gmail.com"><i class="fas fa-envelope"></i>
+                                isiolostmarysgirls@gmail.com</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Newsletter</h4>
+                    <p>Subscribe to get the latest updates and newsletters from St. Mary's.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your Email Address" required>
+                        <button type="submit" class="btn btn-secondary"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 St. Mary's Senior Girls School, Isiolo. Catholic Diocese of Isiolo.</p>
+                <div style="display: flex; gap: 20px;">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -18,12 +18,20 @@
 </head>
 
 <body>
+    <!-- Preloader -->
+    <div class="preloader">
+        <img src="Assets/St.marys_Logo.jpg" alt="Logo" class="preloader-logo">
+        <div class="loader-bar">
+            <div class="loader-progress"></div>
+        </div>
+    </div>
+
     <!-- Top Bar -->
     <div class="top-bar">
         <div class="container">
             <div class="contact-info">
-                <span><i class="fas fa-phone"></i> +254 700 123 456</span>
-                <span><i class="fas fa-envelope"></i> info@stmarysisiolo.ac.ke</span>
+                <span><i class="fas fa-phone"></i> 0711 684 179</span>
+                <span><i class="fas fa-envelope"></i> isiolostmarysgirls@gmail.com</span>
             </div>
             <div class="top-links">
                 <a href="#"><i class="fas fa-user-graduate"></i> Student Portal</a>
@@ -38,7 +46,7 @@
         <div class="container">
             <nav class="nav-container">
                 <a href="index.html" class="logo">
-                    <div class="logo-icon">SM</div>
+                    <img src="Assets/St.marys_Logo.jpg" alt="St. Mary's School Logo" class="logo-img">
                     <div class="logo-text">
                         <h1>St. Mary's Isiolo</h1>
                         <p>Faith, Excellence & Service</p>
@@ -48,10 +56,33 @@
                 <ul class="nav-links">
                     <li><a href="index.html" class="nav-item active">Home</a></li>
                     <li><a href="about.html" class="nav-item">About Us</a></li>
+                    <li class="dropdown">
+                        <a href="departments.html" class="nav-item">Departments <i class="fas fa-chevron-down"
+                                style="font-size: 0.7rem; margin-left: 5px;"></i></a>
+                        <div class="dropdown-menu">
+                            <div class="dropdown-header">Academic Pathways</div>
+                            <a href="departments.html#stem" class="dropdown-item"><i class="fas fa-atom"></i> STEM
+                                Pathway</a>
+                            <a href="departments.html#social-sciences" class="dropdown-item"><i
+                                    class="fas fa-globe"></i> Social Sciences</a>
+                            <a href="departments.html#arts-sports" class="dropdown-item"><i class="fas fa-palette"></i>
+                                Arts & Sports</a>
+                            <div class="dropdown-header">Administration & Support</div>
+                            <a href="departments.html#admin" class="dropdown-item"><i class="fas fa-user-tie"></i>
+                                Administration</a>
+                            <a href="departments.html#finance" class="dropdown-item"><i class="fas fa-wallet"></i>
+                                Finance & Accounts</a>
+                            <a href="departments.html#guidance" class="dropdown-item"><i
+                                    class="fas fa-hands-helping"></i> Guidance & Counseling</a>
+                            <a href="departments.html#ict" class="dropdown-item"><i class="fas fa-laptop-code"></i> ICT
+                                Department</a>
+                        </div>
+                    </li>
                     <li><a href="academics.html" class="nav-item">Academics</a></li>
                     <li><a href="admissions.html" class="nav-item">Admissions</a></li>
                     <li><a href="student-life.html" class="nav-item">Student Life</a></li>
                     <li><a href="news.html" class="nav-item">News</a></li>
+                    <li><a href="bishop.html" class="nav-item">Bishop's Message</a></li>
                     <li><a href="contact.html" class="nav-item">Contact</a></li>
                 </ul>
 
@@ -59,8 +90,7 @@
                     <button class="mobile-menu-btn">
                         <i class="fas fa-bars"></i>
                     </button>
-                    <a href="admissions.html" class="btn btn-primary d-none d-lg-flex"
-                        style="padding: 12px 25px;">Admission 2026</a>
+                    <a href="admissions.html" class="btn btn-primary d-none d-lg-flex">Admission 2026</a>
                 </div>
             </nav>
         </div>
@@ -69,7 +99,7 @@
     <!-- Hero Slider -->
     <div class="hero-slider">
         <div class="slide active"
-            style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('Assets/school-hero.jpg');">
+            style="background-image: linear-gradient(to bottom, rgba(15, 23, 42, 0.7), rgba(120, 28, 59, 0.5)), url('Assets/school-hero.jpg');">
             <div class="slide-content">
                 <span class="badge"
                     style="background: rgba(212, 168, 0, 0.3); color: white; border: 1px solid var(--secondary);">Established
@@ -85,7 +115,7 @@
             </div>
         </div>
         <div class="slide"
-            style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('Assets/student-life-2.jpg');">
+            style="background-image: linear-gradient(to bottom, rgba(15, 23, 42, 0.7), rgba(120, 28, 59, 0.5)), url('Assets/student-life-2.jpg');">
             <div class="slide-content">
                 <span class="badge"
                     style="background: rgba(120, 28, 59, 0.4); color: white; border: 1px solid var(--primary-light);">Academic
@@ -99,7 +129,7 @@
             </div>
         </div>
         <div class="slide"
-            style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('Assets/student-life-2.jpg');">
+            style="background-image: linear-gradient(to bottom, rgba(15, 23, 42, 0.7), rgba(120, 28, 59, 0.5)), url('Assets/student-life-3.jpg');">
             <div class="slide-content">
                 <span class="badge"
                     style="background: rgba(212, 168, 0, 0.3); color: white; border: 1px solid var(--secondary);">Faith
@@ -161,8 +191,44 @@
         </div>
     </section>
 
+    <!-- Manager's Message (Bishop) -->
+    <section id="manager-welcome" style="padding: 100px 0; background: var(--white);">
+        <div class="container">
+            <div style="display: flex; flex-wrap: wrap; gap: 60px; align-items: center;">
+                <div style="flex: 0 0 400px; max-width: 100%; position: relative;">
+                    <div
+                        style="position: absolute; top: -20px; left: -20px; width: 100%; height: 100%; border: 2px solid var(--secondary); border-radius: var(--radius-lg); z-index: 0;">
+                    </div>
+                    <img src="Assets/bishop-peter-makau.jpg" alt="Rt. Rev. Peter Makau"
+                        style="width: 100%; border-radius: var(--radius-lg); box-shadow: var(--shadow-xl); position: relative; z-index: 1;">
+                </div>
+                <div style="flex: 1; min-width: 300px;">
+                    <span class="badge" style="margin-bottom: 20px;">Manager's Welcome</span>
+                    <h2 class="section-title" style="text-align: left; margin-bottom: 25px;">Faith-Based Academic
+                        Excellence</h2>
+                    <p
+                        style="font-size: 1.2rem; line-height: 1.8; color: var(--gray-700); margin-bottom: 30px; font-style: italic;">
+                        "Welcome to St. Mary's Senior Girls School, Isiolo. As a Catholic institution, we are committed
+                        to providing a holistic education that empowers young women to excel academically, grow
+                        spiritually, and lead with compassion."
+                    </p>
+                    <div style="margin-bottom: 40px;">
+                        <h4
+                            style="font-family: 'Cinzel', serif; font-size: 1.5rem; color: var(--navy); margin-bottom: 5px;">
+                            Rt. Rev. Peter Makau, IMC</h4>
+                        <p
+                            style="color: var(--primary); font-weight: 700; letter-spacing: 1px; text-transform: uppercase; font-size: 0.8rem;">
+                            Bishop of Isiolo & School Manager</p>
+                    </div>
+                    <a href="bishop.html" class="btn btn-secondary">Read Bishop's Message <i
+                            class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Why Choose Us -->
-    <section id="excellence">
+    <section id="excellence" style="background: linear-gradient(to bottom, #ffffff, var(--gray-50));">
         <div class="container">
             <div class="section-header reveal">
                 <span class="badge">Our Identity</span>
@@ -242,7 +308,76 @@
         </div>
     </section>
 
-    <!-- School Magazine Section -->
+    <!-- Principal's Message Section -->
+    <section
+        style="background: linear-gradient(135deg, var(--navy-dark) 0%, var(--primary-dark) 100%); padding: 80px 0;">
+        <div class="container">
+            <div class="reveal" style="display: flex; flex-wrap: wrap; align-items: center; gap: 60px;">
+                <div style="flex: 0 0 auto; text-align: center;">
+                    <img src="Assets/principal-sister.jpg" alt="Sr. Julia Mark - Principal"
+                        style="width: 220px; height: 270px; object-fit: cover; object-position: top; border-radius: var(--radius-lg); box-shadow: 0 20px 50px rgba(0,0,0,0.4); border: 4px solid var(--secondary);">
+                    <div style="margin-top: 15px;">
+                        <h4 style="color: var(--secondary); font-size: 1.1rem; margin-bottom: 4px;">Sr. Julia Mark</h4>
+                        <p style="color: rgba(255,255,255,0.7); font-size: 0.9rem;">Principal, St. Mary's Isiolo</p>
+                    </div>
+                </div>
+                <div style="flex: 1; min-width: 280px;">
+                    <span class="badge"
+                        style="background: rgba(212,168,0,0.2); color: var(--secondary); border: 1px solid var(--secondary); margin-bottom: 20px;">The
+                        Principal's Message</span>
+                    <blockquote
+                        style="font-family: var(--font-serif); font-size: 1.6rem; line-height: 1.6; color: white; font-style: italic; margin: 0 0 30px 0; border-left: 4px solid var(--secondary); padding-left: 25px;">
+                        "At St. Mary's, we believe that education is the most powerful weapon which you can use to
+                        change the world. Our dedicated staff works tirelessly to ensure that every girl who walks
+                        through our gates leaves with the knowledge, confidence, and faith to conquer any challenge."
+                    </blockquote>
+                    <a href="about.html" class="btn btn-secondary">Read Full Message <i
+                            class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bishop's Message Teaser -->
+    <section style="background: #f9f6f0; padding: 80px 0; border-top: 4px solid #c9a84c;">
+        <div class="container">
+            <div class="reveal" style="display: flex; flex-wrap: wrap; align-items: center; gap: 60px;">
+                <div style="flex: 1; min-width: 280px;">
+                    <span class="badge"
+                        style="background: rgba(10,22,40,0.08); color: #0a1628; border: 1px solid rgba(10,22,40,0.2); margin-bottom: 20px;">
+                        <i class="fas fa-cross" style="margin-right: 6px;"></i> Catholic Diocese of Isiolo
+                    </span>
+                    <h2 class="section-title" style="text-align: left; color: #0a1628;">Message from the Bishop</h2>
+                    <blockquote
+                        style="font-family: var(--font-serif); font-size: 1.25rem; line-height: 1.8; color: #333; font-style: italic; margin: 0 0 25px 0; border-left: 4px solid #c9a84c; padding-left: 25px;">
+                        "True education does not only impart academic knowledge but empowers young people to discover
+                        their God-given potential and to use their talents responsibly in service to humanity."
+                    </blockquote>
+                    <div style="margin-bottom: 25px;">
+                        <p style="font-weight: 700; color: #0a1628; font-size: 1rem; margin-bottom: 3px;">Rt. Rev. Peter
+                            Munguti Makau, IMC</p>
+                        <p style="color: #c9a84c; font-weight: 600; font-size: 0.9rem;">Bishop — Catholic Diocese of
+                            Isiolo &amp; School Manager</p>
+                    </div>
+                    <a href="bishop.html" class="btn btn-primary">
+                        <i class="fas fa-scroll"></i> Read Full Pastoral Message
+                    </a>
+                </div>
+                <div style="flex: 0 0 auto; text-align: center;">
+                    <div style="position: relative; display: inline-block;">
+                        <div
+                            style="position: absolute; inset: -6px; border-radius: 14px; background: linear-gradient(135deg, #c9a84c, #9a7a2e); z-index: 0;">
+                        </div>
+                        <img src="Assets/bishop-peter-munguti.jpg" alt="Rt. Rev. Peter Munguti Makau, IMC"
+                            style="position: relative; z-index: 1; width: 220px; height: 270px; object-fit: cover; object-position: top center; border-radius: 10px; display: block; box-shadow: 0 20px 50px rgba(0,0,0,0.25);">
+                    </div>
+                    <p style="margin-top: 15px; font-size: 0.85rem; color: #888; font-style: italic;">"Console My
+                        People" — Isaiah 40:1</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section class="magazine-section" style="background: var(--gray-50); padding: 80px 0;">
         <div class="container">
             <div class="magazine-content reveal"
@@ -357,6 +492,79 @@
         </div>
     </section>
 
+    <!-- Photo Gallery -->
+    <section class="gallery-section reveal">
+        <div class="container">
+            <div class="section-header">
+                <span class="badge">Campus Life</span>
+                <h2 class="section-title">St. Mary's in Pictures</h2>
+                <p class="section-subtitle">A glimpse into the vibrant daily life, celebrations, and learning
+                    experiences of our students.</p>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="Assets/school-photo-2.jpg" alt="School Activity">
+                    <div class="gallery-overlay">
+                        <span>Academic Excellence</span>
+                        <h4>Learning in Progress</h4>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="Assets/school-photo-3.jpg" alt="School Activity">
+                    <div class="gallery-overlay">
+                        <span>Leadership</span>
+                        <h4>Student Council Meeting</h4>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="Assets/school-photo-4.jpg" alt="School Activity">
+                    <div class="gallery-overlay">
+                        <span>Spirituality</span>
+                        <h4>Morning Devotion</h4>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="Assets/school-photo-5.jpg" alt="School Activity">
+                    <div class="gallery-overlay">
+                        <span>Sports</span>
+                        <h4>Athletics Day</h4>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="Assets/school-photo-6.jpg" alt="School Activity">
+                    <div class="gallery-overlay">
+                        <span>Culture</span>
+                        <h4>Traditional Dance</h4>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="Assets/school-photo-7.jpg" alt="School Activity">
+                    <div class="gallery-overlay">
+                        <span>Campus</span>
+                        <h4>Our Beautiful Grounds</h4>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="Assets/school-photo-8.jpg" alt="School Activity">
+                    <div class="gallery-overlay">
+                        <span>Innovation</span>
+                        <h4>STEM Lab Session</h4>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="Assets/school-photo-9.jpg" alt="School Activity">
+                    <div class="gallery-overlay">
+                        <span>Community</span>
+                        <h4>Sisterhood & Bonding</h4>
+                    </div>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 50px;">
+                <a href="student-life.html" class="btn btn-outline">View More Moments</a>
+            </div>
+        </div>
+    </section>
+
     <!-- CTA Section -->
     <section class="cta">
         <div class="container reveal">
@@ -376,7 +584,7 @@
             <div class="footer-top">
                 <div class="footer-col footer-logo">
                     <a href="index.html" class="logo" style="margin-bottom: 30px;">
-                        <div class="logo-icon">SM</div>
+                        <img src="Assets/St.marys_Logo.jpg" alt="St. Mary's School Logo" class="logo-img">
                         <div class="logo-text">
                             <h1 style="color: white;">St. Mary's Isiolo</h1>
                             <p style="color: rgba(255,255,255,0.6);">Faith, Excellence & Service</p>
@@ -409,10 +617,11 @@
                 <div class="footer-col">
                     <h4>Contact</h4>
                     <ul class="footer-links">
-                        <li><a><i class="fas fa-map-marker-alt"></i> P.O. Box 123-60300, Isiolo, Kenya</a></li>
-                        <li><a href="tel:+254700123456"><i class="fas fa-phone"></i> +254 700 123 456</a></li>
-                        <li><a href="mailto:info@stmarysisiolo.ac.ke"><i class="fas fa-envelope"></i>
-                                info@stmarysisiolo.ac.ke</a></li>
+                        <li><a><i class="fas fa-map-marker-alt"></i> P.O. Box 119 - 60300, Isiolo Town, Kenya. Located
+                                along the Isiolo-Marsabit Road.</a></li>
+                        <li><a href="tel:+254711684179"><i class="fas fa-phone"></i> 0711 684 179</a></li>
+                        <li><a href="mailto:isiolostmarysgirls@gmail.com"><i class="fas fa-envelope"></i>
+                                isiolostmarysgirls@gmail.com</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">

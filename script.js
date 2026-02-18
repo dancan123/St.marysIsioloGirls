@@ -3,10 +3,22 @@
   Interactivity and Micro-animations
 */
 
+const fadeOutPreloader = () => {
+    const preloader = document.querySelector('.preloader');
+    if (preloader) {
+        preloader.classList.add('fade-out');
+        setTimeout(() => {
+            preloader.style.display = 'none';
+        }, 600);
+    }
+};
+
+window.addEventListener('load', fadeOutPreloader);
+
 document.addEventListener('DOMContentLoaded', () => {
     // 1. Sticky Header Logic
     const header = document.getElementById('main-header');
-    
+
     const handleScroll = () => {
         if (window.scrollY > 100) {
             header.classList.add('scrolled');
@@ -65,7 +77,7 @@ document.addEventListener('DOMContentLoaded', () => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('active');
-                
+
                 // If it's a stats section, trigger counters
                 if (entry.target.classList.contains('stats')) {
                     animateCounters();
@@ -96,9 +108,26 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Close mobile menu when clicking a link
+    // Handle Dropdowns on Mobile
+    const dropdowns = document.querySelectorAll('.dropdown');
+    dropdowns.forEach(dropdown => {
+        const link = dropdown.querySelector('.nav-item');
+        link.addEventListener('click', (e) => {
+            if (window.innerWidth <= 991) {
+                e.preventDefault();
+                dropdown.classList.toggle('active');
+            }
+        });
+    });
+
+    // Close mobile menu when clicking a link (but not if it's a dropdown toggle)
     navItems.forEach(item => {
-        item.addEventListener('click', () => {
+        item.addEventListener('click', (e) => {
+            if (item.parentElement.classList.contains('dropdown') && window.innerWidth <= 991) {
+                // Let the dropdown toggle handle it
+                return;
+            }
+
             navLinks.classList.remove('active');
             const icon = mobileToggle.querySelector('i');
             if (icon) icon.classList.replace('fa-times', 'fa-bars');
@@ -112,7 +141,7 @@ document.addEventListener('DOMContentLoaded', () => {
             e.preventDefault();
             const btn = form.querySelector('button[type="submit"]');
             const originalText = btn.innerHTML;
-            
+
             btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
             btn.style.opacity = '0.7';
             btn.disabled = true;
@@ -121,7 +150,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 btn.innerHTML = '<i class="fas fa-check"></i> Sent Successfully!';
                 btn.classList.add('btn-success');
                 form.reset();
-                
+
                 setTimeout(() => {
                     btn.innerHTML = originalText;
                     btn.style.opacity = '1';
@@ -131,14 +160,25 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // 7. Parallax Effect for Hero
+    // 8. Back to Top Button
+    const backToTop = document.createElement('button');
+    backToTop.innerHTML = '<i class="fas fa-chevron-up"></i>';
+    backToTop.className = 'back-to-top';
+    document.body.appendChild(backToTop);
+
     window.addEventListener('scroll', () => {
-        const scrolled = window.scrollY;
-        const heroContent = document.querySelector('.slide-content');
-        if (heroContent) {
-            heroContent.style.transform = `translateY(${scrolled * 0.3}px)`;
-            heroContent.style.opacity = 1 - scrolled / 700;
+        if (window.scrollY > 500) {
+            backToTop.classList.add('visible');
+        } else {
+            backToTop.classList.remove('visible');
         }
+    });
+
+    backToTop.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
     });
 
 });

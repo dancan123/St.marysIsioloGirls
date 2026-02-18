@@ -348,6 +348,47 @@ header.scrolled .nav-item {
     transform: translateX(10px);
 }
 
+/* Mobile Menu Button (Hamburger) */
+.mobile-menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: var(--radius-sm);
+    color: var(--white);
+    font-size: 1.5rem;
+    transition: var(--transition);
+    z-index: 2100;
+    position: relative;
+}
+
+header.scrolled .mobile-menu-btn {
+    color: var(--navy);
+}
+
+.mobile-menu-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+header.scrolled .mobile-menu-btn:hover {
+    background: var(--gray-100);
+}
+
+/* Mobile Nav Overlay */
+.nav-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1999;
+    backdrop-filter: blur(4px);
+}
+
+.nav-overlay.active {
+    display: block;
+}
+
 header.scrolled .nav-item:hover {
     color: var(--primary) !important;
 }
@@ -1123,6 +1164,12 @@ footer {
 
     .mobile-menu-btn {
         display: block;
+    }
+
+    .nav-actions {
+        display: flex;
+        align-items: center;
+        gap: 10px;
     }
 
     .nav-links {

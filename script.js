@@ -95,17 +95,35 @@ document.addEventListener('DOMContentLoaded', () => {
     const mobileToggle = document.querySelector('.mobile-menu-btn');
     const navLinks = document.querySelector('.nav-links');
     const navItems = document.querySelectorAll('.nav-item');
+    const navOverlay = document.getElementById('nav-overlay');
+
+    const openMobileMenu = () => {
+        navLinks.classList.add('active');
+        if (navOverlay) navOverlay.classList.add('active');
+        const icon = mobileToggle.querySelector('i');
+        if (icon) icon.classList.replace('fa-bars', 'fa-times');
+    };
+
+    const closeMobileMenu = () => {
+        navLinks.classList.remove('active');
+        if (navOverlay) navOverlay.classList.remove('active');
+        const icon = mobileToggle ? mobileToggle.querySelector('i') : null;
+        if (icon) icon.classList.replace('fa-times', 'fa-bars');
+    };
 
     if (mobileToggle) {
         mobileToggle.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-            const icon = mobileToggle.querySelector('i');
-            if (icon.classList.contains('fa-bars')) {
-                icon.classList.replace('fa-bars', 'fa-times');
+            if (navLinks.classList.contains('active')) {
+                closeMobileMenu();
             } else {
-                icon.classList.replace('fa-times', 'fa-bars');
+                openMobileMenu();
             }
         });
+    }
+
+    // Close menu when clicking the overlay backdrop
+    if (navOverlay) {
+        navOverlay.addEventListener('click', closeMobileMenu);
     }
 
     // Handle Dropdowns on Mobile
@@ -133,11 +151,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     return;
                 }
 
-                navLinks.classList.remove('active');
-                if (mobileToggle) {
-                    const icon = mobileToggle.querySelector('i');
-                    if (icon) icon.classList.replace('fa-times', 'fa-bars');
-                }
+                closeMobileMenu();
             }
         });
     });

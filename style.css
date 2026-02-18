@@ -720,7 +720,7 @@ footer {
 
 /* Page Header */
 .page-header {
-    background: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.8)), url('https://images.unsplash.com/photo-1541339907198-e08759df9a73?q=80&w=2070&auto=format&fit=crop') center/cover;
+    background: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.8)), url('Assets/student-life-2.jpg') center/cover;
     padding: 180px 0 100px;
     color: var(--white);
     text-align: center;

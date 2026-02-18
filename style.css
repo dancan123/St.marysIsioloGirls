@@ -410,35 +410,17 @@ header.scrolled .mobile-menu-btn {
     transform: rotate(90deg);
 }
 
-/* Mobile Nav Overlay */
+/* Mobile Nav Overlay - transparent, just catches outside taps */
 .nav-overlay {
     display: none;
     position: fixed;
     inset: 0;
-    background: rgba(0, 0, 0, 0.55);
+    background: transparent;
     z-index: 1999;
-    backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
 }
 
 .nav-overlay.active {
     display: block;
-    animation: fadeOverlay 0.3s ease forwards;
-}
-
-@keyframes fadeOverlay {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1;
-    }
-}
-
-
-header.scrolled .nav-item:hover {
-    color: var(--primary) !important;
 }
 
 .nav-item::after {

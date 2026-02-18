@@ -104,6 +104,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const icon = mobileToggle.querySelector('i');
             if (icon) icon.classList.replace('fa-bars', 'fa-times');
         }
+        document.body.style.overflow = 'hidden';
     };
 
     const closeMobileMenu = () => {
@@ -114,21 +115,30 @@ document.addEventListener('DOMContentLoaded', () => {
             const icon = mobileToggle.querySelector('i');
             if (icon) icon.classList.replace('fa-times', 'fa-bars');
         }
+        document.body.style.overflow = 'auto';
     };
 
     if (mobileToggle) {
-        mobileToggle.addEventListener('click', () => {
+        console.log("Mobile toggle button found and listener attached.");
+        mobileToggle.addEventListener('click', (e) => {
+            e.stopPropagation();
+            console.log("Mobile toggle clicked. Current state:", navLinks.classList.contains('active') ? "Open" : "Closed");
             if (navLinks.classList.contains('active')) {
                 closeMobileMenu();
             } else {
                 openMobileMenu();
             }
         });
+    } else {
+        console.warn("Mobile toggle button (.mobile-menu-btn) not found!");
     }
 
     // Close menu when tapping the overlay backdrop
     if (navOverlay) {
-        navOverlay.addEventListener('click', closeMobileMenu);
+        navOverlay.addEventListener('click', (e) => {
+            console.log("Overlay clicked, closing menu.");
+            closeMobileMenu();
+        });
     }
 
     // Handle Dropdowns on Mobile — only toggle submenu, don't block navigation

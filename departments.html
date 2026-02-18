@@ -330,50 +330,117 @@
                     3. Administration & Finance</h2>
 
                 <div class="grid-stack"
-                    style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
+                    style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px;">
                     <!-- Administration -->
-                    <div id="admin"
-                        style="background: white; padding: 40px; border-radius: var(--radius-lg); box-shadow: var(--shadow-md);">
+                    <div id="admin" class="dept-group" style="padding: 40px; margin-bottom: 0;">
                         <h4
-                            style="font-size: 1.5rem; color: var(--primary); margin-bottom: 20px; display: flex; align-items: center; gap: 15px;">
+                            style="font-family: 'Cinzel', serif; font-size: 1.5rem; color: var(--navy); margin-bottom: 30px; display: flex; align-items: center; gap: 15px; border-bottom: 2px solid var(--primary); padding-bottom: 15px;">
                             <i class="fas fa-building"></i> Administration
                         </h4>
-                        <ul style="list-style: none; padding: 0;">
-                            <li style="padding: 12px 0; font-weight: 600;"><i class="fas fa-user-circle"
-                                    style="margin-right: 10px; color: var(--primary-light);"></i> Principal’s Office
-                            </li>
-                            <li style="padding: 12px 0; font-weight: 600;"><i class="fas fa-user-circle"
-                                    style="margin-right: 10px; color: var(--primary-light);"></i> Deputy Principal</li>
-                            <li style="padding: 12px 0; font-weight: 600;"><i class="fas fa-user-circle"
-                                    style="margin-right: 10px; color: var(--primary-light);"></i> Director of Studies /
-                                Academic Registrar</li>
-                            <li style="padding: 12px 0; font-weight: 600;"><i class="fas fa-user-circle"
-                                    style="margin-right: 10px; color: var(--primary-light);"></i> Heads of Departments
-                                (HODs)</li>
-                            <li style="padding: 12px 0; font-weight: 600;"><i class="fas fa-user-circle"
-                                    style="margin-right: 10px; color: var(--primary-light);"></i> Examinations Office
-                            </li>
-                        </ul>
+
+                        <div style="display: grid; gap: 20px;">
+                            <!-- Principal -->
+                            <div
+                                style="display: flex; align-items: center; gap: 20px; background: var(--gray-50); padding: 15px; border-radius: var(--radius-md); border-left: 4px solid var(--secondary);">
+                                <img src="Assets/principal-sister.jpg"
+                                    style="width: 70px; height: 70px; border-radius: 50%; object-fit: cover; border: 2px solid var(--white); box-shadow: var(--shadow-sm);">
+                                <div>
+                                    <h5 style="margin: 0; color: var(--navy); font-size: 1rem;">Sr. Julia Wambui</h5>
+                                    <span style="font-size: 0.8rem; color: var(--primary); font-weight: 700;">School
+                                        Principal</span>
+                                </div>
+                            </div>
+                            <!-- Deputy Principal -->
+                            <div
+                                style="display: flex; align-items: center; gap: 20px; background: var(--gray-50); padding: 15px; border-radius: var(--radius-md); border-left: 4px solid var(--primary-light);">
+                                <img src="Assets/principal-julia.jpg"
+                                    style="width: 70px; height: 70px; border-radius: 50%; object-fit: cover; border: 2px solid var(--white); box-shadow: var(--shadow-sm);">
+                                <div>
+                                    <h5 style="margin: 0; color: var(--navy); font-size: 1rem;">Mrs. Lucy Maina</h5>
+                                    <span style="font-size: 0.8rem; color: var(--primary); font-weight: 700;">Deputy
+                                        Principal</span>
+                                </div>
+                            </div>
+                            <!-- Director of Studies -->
+                            <div
+                                style="display: flex; align-items: center; gap: 20px; background: var(--gray-50); padding: 15px; border-radius: var(--radius-md); border-left: 4px solid var(--primary-light);">
+                                <img src="Assets/school-photo-9.jpg"
+                                    style="width: 70px; height: 70px; border-radius: 50%; object-fit: cover; border: 2px solid var(--white); box-shadow: var(--shadow-sm);">
+                                <div>
+                                    <h5 style="margin: 0; color: var(--navy); font-size: 1rem;">Mr. Joseph Muturi</h5>
+                                    <span style="font-size: 0.8rem; color: var(--primary); font-weight: 700;">Director
+                                        of Studies</span>
+                                </div>
+                            </div>
+                            <!-- Examination Officer -->
+                            <div
+                                style="display: flex; align-items: center; gap: 20px; background: var(--gray-50); padding: 15px; border-radius: var(--radius-md); border-left: 4px solid var(--primary-light);">
+                                <img src="Assets/school-photo-10.jpg"
+                                    style="width: 70px; height: 70px; border-radius: 50%; object-fit: cover; border: 2px solid var(--white); box-shadow: var(--shadow-sm);">
+                                <div>
+                                    <h5 style="margin: 0; color: var(--navy); font-size: 1rem;">Ms. Jane Mwangi</h5>
+                                    <span
+                                        style="font-size: 0.8rem; color: var(--primary); font-weight: 700;">Examinations
+                                        Officer</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
                     <!-- Finance -->
-                    <div id="finance"
-                        style="background: white; padding: 40px; border-radius: var(--radius-lg); box-shadow: var(--shadow-md);">
+                    <div id="finance" class="dept-group" style="padding: 40px; margin-bottom: 0;">
                         <h4
-                            style="font-size: 1.5rem; color: var(--primary); margin-bottom: 20px; display: flex; align-items: center; gap: 15px;">
+                            style="font-family: 'Cinzel', serif; font-size: 1.5rem; color: var(--navy); margin-bottom: 30px; display: flex; align-items: center; gap: 15px; border-bottom: 2px solid var(--primary); padding-bottom: 15px;">
                             <i class="fas fa-coins"></i> Finance & Accounts
                         </h4>
-                        <ul style="list-style: none; padding: 0;">
-                            <li style="padding: 12px 0; font-weight: 600;"><i class="fas fa-id-card"
-                                    style="margin-right: 10px; color: var(--primary-light);"></i> Bursar</li>
-                            <li style="padding: 12px 0; font-weight: 600;"><i class="fas fa-id-card"
-                                    style="margin-right: 10px; color: var(--primary-light);"></i> Accounts Clerk</li>
-                            <li style="padding: 12px 0; font-weight: 600;"><i class="fas fa-id-card"
-                                    style="margin-right: 10px; color: var(--primary-light);"></i> Procurement Officer
-                            </li>
-                            <li style="padding: 12px 0; font-weight: 600;"><i class="fas fa-id-card"
-                                    style="margin-right: 10px; color: var(--primary-light);"></i> Storekeeper</li>
-                        </ul>
+
+                        <div style="display: grid; gap: 20px;">
+                            <!-- Bursar -->
+                            <div
+                                style="display: flex; align-items: center; gap: 20px; background: var(--gray-50); padding: 15px; border-radius: var(--radius-md); border-left: 4px solid var(--secondary);">
+                                <img src="Assets/school-photo-11.jpg"
+                                    style="width: 70px; height: 70px; border-radius: 50%; object-fit: cover; border: 2px solid var(--white); box-shadow: var(--shadow-sm);">
+                                <div>
+                                    <h5 style="margin: 0; color: var(--navy); font-size: 1rem;">Mr. Simon Peter</h5>
+                                    <span style="font-size: 0.8rem; color: var(--primary); font-weight: 700;">School
+                                        Bursar</span>
+                                </div>
+                            </div>
+                            <!-- Accounts Clerk -->
+                            <div
+                                style="display: flex; align-items: center; gap: 20px; background: var(--gray-50); padding: 15px; border-radius: var(--radius-md); border-left: 4px solid var(--primary-light);">
+                                <img src="Assets/school-photo-12.jpg"
+                                    style="width: 70px; height: 70px; border-radius: 50%; object-fit: cover; border: 2px solid var(--white); box-shadow: var(--shadow-sm);">
+                                <div>
+                                    <h5 style="margin: 0; color: var(--navy); font-size: 1rem;">Ms. Alice Wairimu</h5>
+                                    <span style="font-size: 0.8rem; color: var(--primary); font-weight: 700;">Accounts
+                                        Clerk</span>
+                                </div>
+                            </div>
+                            <!-- Procurement -->
+                            <div
+                                style="display: flex; align-items: center; gap: 20px; background: var(--gray-50); padding: 15px; border-radius: var(--radius-md); border-left: 4px solid var(--primary-light);">
+                                <img src="Assets/school-photo-13.jpg"
+                                    style="width: 70px; height: 70px; border-radius: 50%; object-fit: cover; border: 2px solid var(--white); box-shadow: var(--shadow-sm);">
+                                <div>
+                                    <h5 style="margin: 0; color: var(--navy); font-size: 1rem;">Mr. Kelvin Otieno</h5>
+                                    <span
+                                        style="font-size: 0.8rem; color: var(--primary); font-weight: 700;">Procurement
+                                        Officer</span>
+                                </div>
+                            </div>
+                            <!-- Storekeeper -->
+                            <div
+                                style="display: flex; align-items: center; gap: 20px; background: var(--gray-50); padding: 15px; border-radius: var(--radius-md); border-left: 4px solid var(--primary-light);">
+                                <img src="Assets/school-photo-14.jpg"
+                                    style="width: 70px; height: 70px; border-radius: 50%; object-fit: cover; border: 2px solid var(--white); box-shadow: var(--shadow-sm);">
+                                <div>
+                                    <h5 style="margin: 0; color: var(--navy); font-size: 1rem;">Mrs. Grace Atieno</h5>
+                                    <span
+                                        style="font-size: 0.8rem; color: var(--primary); font-weight: 700;">Storekeeper</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

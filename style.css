@@ -343,6 +343,7 @@ header.scrolled .nav-item {
     padding: 8px 18px;
     font-size: 0.85rem;
     border-radius: var(--radius-sm);
+    transform: translateX(10px);
 }
 
 header.scrolled .nav-item:hover {

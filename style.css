@@ -348,31 +348,66 @@ header.scrolled .nav-item {
     transform: translateX(10px);
 }
 
-/* Mobile Menu Button (Hamburger) */
+/* Mobile Menu Button (Hamburger) - Premium Styled */
 .mobile-menu-btn {
     display: none;
-    background: none;
-    border: none;
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+    border: 2.5px solid var(--secondary);
     cursor: pointer;
-    padding: 8px;
-    border-radius: var(--radius-sm);
-    color: var(--white);
-    font-size: 1.5rem;
+    padding: 0;
+    width: 52px;
+    height: 52px;
+    border-radius: 14px;
+    color: var(--secondary);
+    font-size: 1.6rem;
     transition: var(--transition);
     z-index: 2100;
     position: relative;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 20px rgba(120, 28, 59, 0.45), 0 0 0 0 rgba(212, 168, 0, 0.4);
+    animation: hamburger-pulse 2.5s infinite;
+    flex-shrink: 0;
 }
 
+@keyframes hamburger-pulse {
+
+    0%,
+    100% {
+        box-shadow: 0 4px 20px rgba(120, 28, 59, 0.45), 0 0 0 0 rgba(212, 168, 0, 0.4);
+    }
+
+    50% {
+        box-shadow: 0 4px 20px rgba(120, 28, 59, 0.45), 0 0 0 8px rgba(212, 168, 0, 0);
+    }
+}
+
+.mobile-menu-btn i {
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), color 0.3s ease;
+    display: block;
+    line-height: 1;
+}
+
+/* When scrolled — keep it visible on white header */
 header.scrolled .mobile-menu-btn {
-    color: var(--navy);
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+    border-color: var(--secondary);
+    color: var(--secondary);
 }
 
 .mobile-menu-btn:hover {
-    background: rgba(255, 255, 255, 0.1);
+    transform: scale(1.08) rotate(5deg);
+    background: linear-gradient(135deg, var(--primary-light) 0%, var(--primary) 100%);
+    box-shadow: 0 8px 30px rgba(120, 28, 59, 0.6), 0 0 0 4px rgba(212, 168, 0, 0.25);
+    animation: none;
 }
 
-header.scrolled .mobile-menu-btn:hover {
-    background: var(--gray-100);
+/* Active (open) state — spin the icon */
+.mobile-menu-btn.menu-open {
+    background: linear-gradient(135deg, var(--navy-dark) 0%, var(--navy) 100%);
+    border-color: var(--secondary);
+    animation: none;
+    transform: rotate(90deg);
 }
 
 /* Mobile Nav Overlay */
@@ -380,14 +415,27 @@ header.scrolled .mobile-menu-btn:hover {
     display: none;
     position: fixed;
     inset: 0;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.55);
     z-index: 1999;
     backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
 }
 
 .nav-overlay.active {
     display: block;
+    animation: fadeOverlay 0.3s ease forwards;
 }
+
+@keyframes fadeOverlay {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
 
 header.scrolled .nav-item:hover {
     color: var(--primary) !important;
@@ -1163,7 +1211,7 @@ footer {
     }
 
     .mobile-menu-btn {
-        display: block;
+        display: flex;
     }
 
     .nav-actions {

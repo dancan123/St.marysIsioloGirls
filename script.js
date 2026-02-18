@@ -100,15 +100,21 @@ document.addEventListener('DOMContentLoaded', () => {
     const openMobileMenu = () => {
         navLinks.classList.add('active');
         if (navOverlay) navOverlay.classList.add('active');
-        const icon = mobileToggle.querySelector('i');
-        if (icon) icon.classList.replace('fa-bars', 'fa-times');
+        if (mobileToggle) {
+            mobileToggle.classList.add('menu-open');
+            const icon = mobileToggle.querySelector('i');
+            if (icon) icon.classList.replace('fa-bars', 'fa-times');
+        }
     };
 
     const closeMobileMenu = () => {
         navLinks.classList.remove('active');
         if (navOverlay) navOverlay.classList.remove('active');
-        const icon = mobileToggle ? mobileToggle.querySelector('i') : null;
-        if (icon) icon.classList.replace('fa-times', 'fa-bars');
+        if (mobileToggle) {
+            mobileToggle.classList.remove('menu-open');
+            const icon = mobileToggle.querySelector('i');
+            if (icon) icon.classList.replace('fa-times', 'fa-bars');
+        }
     };
 
     if (mobileToggle) {

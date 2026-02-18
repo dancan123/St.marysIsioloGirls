@@ -121,18 +121,57 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Close mobile menu when clicking a link (but not if it's a dropdown toggle)
-    navItems.forEach(item => {
+    // Updated to include .dropdown-item for mobile menu closure
+    const allLinks = document.querySelectorAll('.nav-item, .dropdown-item');
+    allLinks.forEach(item => {
         item.addEventListener('click', (e) => {
-            if (item.parentElement.classList.contains('dropdown') && window.innerWidth <= 991) {
-                // Let the dropdown toggle handle it
-                return;
-            }
+            // Close mobile menu if it's open
+            if (window.innerWidth <= 991) {
+                // If it's a root dropdown link, don't close yet unless it's the actual link
+                if (item.classList.contains('nav-item') && item.parentElement.classList.contains('dropdown')) {
+                    // This is handled by the dropdown logic below for mobile
+                    return;
+                }
 
-            navLinks.classList.remove('active');
-            const icon = mobileToggle.querySelector('i');
-            if (icon) icon.classList.replace('fa-times', 'fa-bars');
+                navLinks.classList.remove('active');
+                if (mobileToggle) {
+                    const icon = mobileToggle.querySelector('i');
+                    if (icon) icon.classList.replace('fa-times', 'fa-bars');
+                }
+            }
         });
     });
+
+    // Handle Hash Navigation Visibility
+    // If user navigates to a section via #hash, make it active immediately
+    const handleHashReveal = () => {
+        const hash = window.location.hash;
+
+        // Remove active-anchor from everything
+        document.querySelectorAll('.active-anchor').forEach(el => el.classList.remove('active-anchor'));
+
+        if (hash) {
+            const target = document.querySelector(hash);
+            if (target) {
+                target.classList.add('active');
+                target.classList.add('active-anchor');
+
+                // Also activate parent sections if they are reveal
+                let parent = target.parentElement;
+                while (parent) {
+                    if (parent.classList.contains('reveal')) {
+                        parent.classList.add('active');
+                    }
+                    parent = parent.parentElement;
+                }
+
+                // Smooth scroll with offset if needed (though scroll-padding-top handles it)
+            }
+        }
+    };
+
+    window.addEventListener('hashchange', handleHashReveal);
+    handleHashReveal(); // Run on load
 
     // 6. Form Handling (Simple validation & feedback)
     const forms = document.querySelectorAll('form');

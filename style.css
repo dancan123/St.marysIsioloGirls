@@ -3,7 +3,7 @@
   Professional, Premium, and Modern
 */
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,700;0,800;1,700&family=Outfit:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,700;0,800;1,700&family=Outfit:wght@300;400;500;600;700&display=swap');
 
 :root {
     /* Color Palette */
@@ -55,6 +55,8 @@
 
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: 120px;
+    /* Offset for sticky header */
 }
 
 body {
@@ -1087,6 +1089,13 @@ footer {
     transform: translateY(0);
 }
 
+.active-anchor {
+    border: 2px solid var(--secondary) !important;
+    box-shadow: 0 0 30px rgba(212, 168, 0, 0.3) !important;
+    transform: scale(1.02) translateY(-5px) !important;
+    z-index: 10;
+}
+
 /* ═══════════════════════════════════════════ */
 /* RESPONSIVE DESIGN                           */
 /* ═══════════════════════════════════════════ */
@@ -1442,6 +1451,37 @@ footer {
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.5px;
+}
+
+/* Departments Page Specifics */
+.dept-group {
+    background: var(--white);
+    padding: 50px;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+    margin-bottom: 80px;
+    border: 1px solid var(--gray-100);
+    transition: var(--transition);
+}
+
+.dept-group:hover {
+    box-shadow: var(--shadow-md);
+}
+
+.dept-title {
+    font-family: 'Cinzel', serif;
+    color: var(--navy);
+    font-size: 2rem;
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    border-bottom: 2px solid var(--gray-100);
+    padding-bottom: 20px;
+}
+
+.dept-title i {
+    color: var(--secondary);
 }
 
 .dept-tag {

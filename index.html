@@ -553,9 +553,10 @@
             </div>
 
             <div style="text-align: center; margin-top: 60px;" class="reveal">
-                <a href="#" class="btn btn-primary" style="padding: 15px 40px; border-radius: 50px;">
+                <button id="view-awards-btn" class="btn btn-primary"
+                    style="padding: 15px 40px; border-radius: 50px; cursor: pointer;">
                     <i class="fas fa-star" style="margin-right: 10px;"></i> View All Certificates & Trophies
-                </a>
+                </button>
             </div>
         </div>
     </section>
@@ -710,6 +711,84 @@
             </div>
         </div>
     </footer>
+
+    <!-- Awards Modal -->
+    <div class="modal-overlay" id="awards-modal">
+        <div class="modal-content">
+            <button class="modal-close" id="close-modal"><i class="fas fa-times"></i></button>
+            <div style="text-align: center; margin-bottom: 40px;">
+                <span class="badge" style="background: rgba(201, 168, 76, 0.1); color: var(--gold-dark);">Official
+                    Recognition</span>
+                <h2 style="font-family: 'Cinzel', serif; color: var(--navy); margin-top: 15px;">Honors & Wall of Merit
+                </h2>
+                <div style="width: 60px; height: 3px; background: var(--secondary); margin: 20px auto;"></div>
+            </div>
+
+            <div class="awards-gallery">
+                <!-- Award 1 -->
+                <div class="award-item">
+                    <div class="award-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1578357078586-491adf1aa5ba?q=80&w=1964&auto=format&fit=crop"
+                            alt="Science Award">
+                    </div>
+                    <div class="award-info">
+                        <h4>National Science Congress 2025</h4>
+                        <p>1st Place Winner - Regional Innovation</p>
+                    </div>
+                </div>
+                <!-- Award 2 -->
+                <div class="award-item">
+                    <div class="award-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1589330694653-ded6df03f754?q=80&w=2072&auto=format&fit=crop"
+                            alt="Academic Merit">
+                    </div>
+                    <div class="award-info">
+                        <h4>Academic Excellence Merit</h4>
+                        <p>Top Performing School in Isiolo County</p>
+                    </div>
+                </div>
+                <!-- Award 3 -->
+                <div class="award-item">
+                    <div class="award-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1547425260-76bcadfb4f2c?q=80&w=2070&auto=format&fit=crop"
+                            alt="Sports Trophy">
+                    </div>
+                    <div class="award-info">
+                        <h4>Volleyball Championship</h4>
+                        <p>Mainland League Gold Trophy</p>
+                    </div>
+                </div>
+                <!-- Award 4 -->
+                <div class="award-item">
+                    <div class="award-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1505232987770-6da216dc7b37?q=80&w=2070&auto=format&fit=crop"
+                            alt="Music Award">
+                    </div>
+                    <div class="award-info">
+                        <h4>National Music Festival</h4>
+                        <p>Outstanding Performance in Choral Verse</p>
+                    </div>
+                </div>
+                <!-- Award 5 -->
+                <div class="award-item">
+                    <div class="award-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=2070&auto=format&fit=crop"
+                            alt="Innovation Award">
+                    </div>
+                    <div class="award-info">
+                        <h4>ICT Innovation Award 2024</h4>
+                        <p>Certificate of Digital Transformation</p>
+                    </div>
+                </div>
+            </div>
+
+            <div
+                style="margin-top: 50px; text-align: center; border-top: 1px solid var(--gray-100); padding-top: 30px;">
+                <p style="font-style: italic; color: var(--gray-500);">"Success is not just about trophies, but the
+                    character built in the journey."</p>
+            </div>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>

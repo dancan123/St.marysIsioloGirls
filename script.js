@@ -181,4 +181,38 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // 9. Awards Modal Logic
+    const awardsBtn = document.getElementById('view-awards-btn');
+    const awardsModal = document.getElementById('awards-modal');
+    const closeModal = document.getElementById('close-modal');
+
+    if (awardsBtn && awardsModal) {
+        awardsBtn.addEventListener('click', () => {
+            awardsModal.classList.add('active');
+            document.body.style.overflow = 'hidden'; // Prevent scroll
+        });
+
+        if (closeModal) {
+            closeModal.addEventListener('click', () => {
+                awardsModal.classList.remove('active');
+                document.body.style.overflow = 'auto'; // Restore scroll
+            });
+        }
+
+        // Close on clicking overlay
+        awardsModal.addEventListener('click', (e) => {
+            if (e.target === awardsModal) {
+                awardsModal.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            }
+        });
+
+        // Close on Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && awardsModal.classList.contains('active')) {
+                awardsModal.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            }
+        });
+    }
 });

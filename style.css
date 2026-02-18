@@ -420,12 +420,10 @@ header.scrolled .mobile-menu-btn {
     bottom: 0;
     background: transparent;
     z-index: 2050;
-    pointer-events: none;
 }
 
 .nav-overlay.active {
     display: block;
-    pointer-events: auto;
 }
 
 .nav-item::after {
@@ -1221,12 +1219,10 @@ footer {
         transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         box-shadow: -10px 0 30px rgba(0, 0, 0, 0.3);
         overflow-y: auto;
-        pointer-events: none;
     }
 
     .nav-links.active {
         right: 0;
-        pointer-events: auto;
     }
 
     .nav-item {

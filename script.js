@@ -94,7 +94,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // 5. Mobile Menu Toggle
     const mobileToggle = document.querySelector('.mobile-menu-btn');
     const navLinks = document.querySelector('.nav-links');
-    const navItems = document.querySelectorAll('.nav-item');
     const navOverlay = document.getElementById('nav-overlay');
 
     const openMobileMenu = () => {
@@ -127,36 +126,30 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Close menu when clicking the overlay backdrop
+    // Close menu when tapping the overlay backdrop
     if (navOverlay) {
         navOverlay.addEventListener('click', closeMobileMenu);
     }
 
-    // Handle Dropdowns on Mobile
+    // Handle Dropdowns on Mobile — only toggle submenu, don't block navigation
     const dropdowns = document.querySelectorAll('.dropdown');
     dropdowns.forEach(dropdown => {
-        const link = dropdown.querySelector('.nav-item');
-        link.addEventListener('click', (e) => {
-            if (window.innerWidth <= 991) {
-                e.preventDefault();
-                dropdown.classList.toggle('active');
-            }
-        });
+        const chevron = dropdown.querySelector('.fa-chevron-down');
+        if (chevron) {
+            // Clicking the chevron icon toggles the dropdown on mobile
+            chevron.parentElement.addEventListener('click', (e) => {
+                if (window.innerWidth <= 991) {
+                    e.preventDefault();
+                    dropdown.classList.toggle('active');
+                }
+            });
+        }
     });
 
-    // Close mobile menu when clicking a link (but not if it's a dropdown toggle)
-    // Updated to include .dropdown-item for mobile menu closure
-    const allLinks = document.querySelectorAll('.nav-item, .dropdown-item');
-    allLinks.forEach(item => {
-        item.addEventListener('click', (e) => {
-            // Close mobile menu if it's open
+    // Close mobile menu when any nav link is clicked, then let the browser navigate
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
             if (window.innerWidth <= 991) {
-                // If it's a root dropdown link, don't close yet unless it's the actual link
-                if (item.classList.contains('nav-item') && item.parentElement.classList.contains('dropdown')) {
-                    // This is handled by the dropdown logic below for mobile
-                    return;
-                }
-
                 closeMobileMenu();
             }
         });

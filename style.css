@@ -956,7 +956,8 @@ footer {
 
 @media (max-width: 1200px) {
     .container {
-        padding: 0 40px;
+        max-width: 100%;
+        padding: 0 30px;
     }
 }
 
@@ -1048,6 +1049,10 @@ footer {
     .slide-content p {
         font-size: 1rem;
     }
+
+    .page-header {
+        padding: 120px 0 60px !important;
+    }
 }
 
 @media (max-width: 768px) {
@@ -1107,6 +1112,42 @@ footer {
     .logo-img {
         width: 40px;
         height: 40px;
+    }
+
+    .section-title {
+        font-size: 2rem !important;
+    }
+}
+
+/* Responsive Table Wrapper */
+.table-responsive {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    margin-bottom: 1rem;
+    border-radius: var(--radius-sm);
+}
+
+.table-responsive table {
+    min-width: 600px;
+    /* Ensures table doesn't shrink into oblivion */
+}
+
+/* Stacking Utility for Flex/Grid */
+@media (max-width: 991px) {
+    .flex-stack {
+        flex-direction: column !important;
+        gap: 30px !important;
+    }
+
+    .grid-stack {
+        grid-template-columns: 1fr !important;
+        gap: 20px !important;
+    }
+
+    .mobile-px-0 {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
     }
 }
 
